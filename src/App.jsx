@@ -1,18 +1,20 @@
-import './App.css';
+import {Routes, Route, Navigate} from "react-router-dom";
+import {navRoutes, routes} from "./routes.jsx";
+import styles from "./App.module.css";
+import {Meta} from "./meta.jsx";
+
 
 function App() {
-    return (
-        <div className="maintenance-container">
-            <div className="maintenance-content">
-                <h2 className="company-heading animated-heading">SPARTAN SECURITAS SOLUTIONS PRIVATE LIMITED</h2>
-                <h1 className="animated-message">🚧 Maintenance in Progress 🚧</h1>
-                <p className="animated-text">
-                    We’re currently working on some improvements! <br />
-                    Please check back soon.
-                </p>
-            </div>
-        </div>
-    );
+
+    return (<>
+        <Meta/>
+        <Routes>
+            {navRoutes.map(({path, element}, key) => element &&
+                <Route key={key} exact path={path} element={element}/>)}
+            {routes.map(({path, element}, key) => element &&
+                <Route key={key} exact path={path} element={element}/>)}
+        </Routes>
+    </>);
 }
 
 export default App;
