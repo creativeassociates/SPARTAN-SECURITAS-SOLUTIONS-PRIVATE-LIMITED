@@ -3,7 +3,7 @@ import { navRoutes } from "../../../routes.jsx";
 
 import { Typography } from "@material-tailwind/react";
 
-export function HotelSecurity() {
+export function LawnGardenLandscaping() {
     return (
         <>
             
@@ -17,22 +17,22 @@ export function HotelSecurity() {
                 <div className="relative min-h-screen flex flex-col md:flex-row w-10/12 mx-auto pt-10 pb-20">
                     <div className="container text-center px-4 md:px-8 flex-1">
                         <Typography variant="h2" color="white" className="text-left text-3xl md:text-4xl lg:text-5xl">
-                            Hotel Security
+                            Lawn and Garden Landscaping
                         </Typography>
                         <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
-                            At Spartan Securitas Solutions, we understand the unique security challenges that hotels face. Our Hotel Security services ensure that both staff and guests are protected at all times. We provide surveillance, entry point security, and quick response teams to handle emergencies, allowing hotel management to focus on delivering a superior guest experience.
-                        </Typography>
-                        <br />
-                        <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
-                            Our security guards are trained to blend into the hospitality environment while maintaining a high level of vigilance. From monitoring entrances and exits, patrolling hallways, to ensuring that key areas like lobbies, parking lots, and event spaces are secure, we offer a complete security package for hotels of all sizes. Our team also handles VIP protection for high-profile guests, ensuring their privacy and safety are always prioritized.
+                            Spartan Securitas Solutions offers comprehensive Lawn and Garden Landscaping services designed to enhance the beauty and functionality of your outdoor spaces. Our team of experienced landscapers works closely with clients to create stunning landscapes that meet their specific needs and preferences.
                         </Typography>
                         <br />
                         <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
-                            With a comprehensive understanding of hotel operations, we work closely with management to customize security plans that fit the specific layout and needs of your property, enhancing safety while maintaining the welcoming atmosphere that guests expect.
+                            We provide a full range of services, including lawn installation, garden design, tree and shrub planting, irrigation system installation, and ongoing maintenance. Our landscaping solutions not only improve the aesthetic appeal of your property but also contribute to environmental sustainability by promoting biodiversity and reducing urban heat.
+                        </Typography>
+                        <br />
+                        <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
+                            From residential gardens to commercial properties, we are committed to delivering high-quality results that exceed expectations. Trust Spartan Securitas Solutions to transform your outdoor spaces into beautiful, functional environments that you can enjoy year-round.
                         </Typography>
                     </div>
                     <div className="flex-1 pt-10 md:pt-20">
-                        <div className="h-80 md:h-96 lg:h-[32rem] bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('./img/hotel-security.png')" }} />
+                        <div className="h-80 md:h-96 lg:h-[32rem] bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('./img/lawn-garden-landscaping.jpeg')" }} />
                     </div>
                 </div>
             </div>

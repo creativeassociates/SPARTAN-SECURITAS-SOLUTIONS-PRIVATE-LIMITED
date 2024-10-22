@@ -23,13 +23,13 @@ export const services = [
         name: "Soft Services",
         path: "/softServices",
         services: [
-            {name: "Housekeeping & Cleaning Services"},
-            {name: "Disinfecting and Sanitizing Services"},
-            {name: "Pest Control Service"},
-            {name: "Pantry Services"},
-            {name: "Facade Cleaning"},
-            {name: "Guest House Management"},
-            {name: "Lawn and Garden Landscaping"}
+            {name: "Housekeeping & Cleaning Services", path: "/housekeeping&CleaningServices",},
+            {name: "Disinfecting and Sanitizing Services", path: "/disinfectionAndSanitizingServices",},
+            {name: "Pest Control Service", path: "/pestControlService",},
+            {name: "Pantry Services", path: "/pantryServices",},
+            {name: "Facade Cleaning", path: "/facadeCleaning",},
+            {name: "Guest House Management", path: "/guestHouseManagement",},
+            {name: "Lawn and Garden Landscaping", path: "/lawnAndGardenLandscaping",},
         ],
     },
     {
@@ -37,13 +37,13 @@ export const services = [
         name: "Third Party Payroll",
         path: "/thirdPartyPayroll",
         services: [
-            {name: "End-to-End Payroll Management"},
-            {name: "Compliance and Regulatory Expertise"},
-            {name: "Time and Resource Optimization"},
-            {name: "Accurate and Timely Payroll Processing"},
-            {name: "Streamlined HR Services"},
-            {name: "Experienced and Professional Team"},
-            {name: "Focus on Core Business Functions"}
+            {name: "End-to-End Payroll Management", path: "/endToEndPayrollManagement"},
+            {name: "Compliance and Regulatory Expertise", path: "/complianceAndRegulatoryExpertise"},
+            {name: "Time and Resource Optimization", path: "/timeAndResourceOptimization"},
+            {name: "Accurate and Timely Payroll Processing", path: "/accurateAndTimelyPayrollProcessing"},
+            {name: "Streamlined HR Services", path: "/streamlinedHRServices"},
+            {name: "Experienced and Professional Team", path: "/experiencedAndProfessionalTeam"},
+            {name: "Focus on Core Business Functions", path: "/focusOnCoreBusinessFunctions"}
         ],
     },
     {

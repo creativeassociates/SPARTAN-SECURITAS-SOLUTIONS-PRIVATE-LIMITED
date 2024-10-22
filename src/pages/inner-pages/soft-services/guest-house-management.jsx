@@ -3,7 +3,7 @@ import { navRoutes } from "../../../routes.jsx";
 
 import { Typography } from "@material-tailwind/react";
 
-export function HotelSecurity() {
+export function GuestHouseManagement() {
     return (
         <>
             
@@ -17,22 +17,22 @@ export function HotelSecurity() {
                 <div className="relative min-h-screen flex flex-col md:flex-row w-10/12 mx-auto pt-10 pb-20">
                     <div className="container text-center px-4 md:px-8 flex-1">
                         <Typography variant="h2" color="white" className="text-left text-3xl md:text-4xl lg:text-5xl">
-                            Hotel Security
+                            Guest House Management
                         </Typography>
                         <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
-                            At Spartan Securitas Solutions, we understand the unique security challenges that hotels face. Our Hotel Security services ensure that both staff and guests are protected at all times. We provide surveillance, entry point security, and quick response teams to handle emergencies, allowing hotel management to focus on delivering a superior guest experience.
-                        </Typography>
-                        <br />
-                        <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
-                            Our security guards are trained to blend into the hospitality environment while maintaining a high level of vigilance. From monitoring entrances and exits, patrolling hallways, to ensuring that key areas like lobbies, parking lots, and event spaces are secure, we offer a complete security package for hotels of all sizes. Our team also handles VIP protection for high-profile guests, ensuring their privacy and safety are always prioritized.
+                            Spartan Securitas Solutions provides expert Guest House Management services, ensuring a comfortable and welcoming experience for your guests. Our dedicated team is responsible for the day-to-day operations of guest houses, offering a full range of services from booking management to maintenance and guest services.
                         </Typography>
                         <br />
                         <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
-                            With a comprehensive understanding of hotel operations, we work closely with management to customize security plans that fit the specific layout and needs of your property, enhancing safety while maintaining the welcoming atmosphere that guests expect.
+                            We focus on creating a seamless experience for guests, from check-in to check-out. Our services include housekeeping, catering, event planning, and concierge services, ensuring that all guest needs are met promptly and professionally. We also handle maintenance and emergency services, ensuring that your property remains in top condition.
+                        </Typography>
+                        <br />
+                        <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
+                            By choosing Spartan Securitas Solutions for your guest house management needs, you can focus on growing your business while we take care of the operational details. We aim to provide exceptional service that enhances guest satisfaction and encourages repeat visits.
                         </Typography>
                     </div>
                     <div className="flex-1 pt-10 md:pt-20">
-                        <div className="h-80 md:h-96 lg:h-[32rem] bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('./img/hotel-security.png')" }} />
+                        <div className="h-80 md:h-96 lg:h-[32rem] bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('./img/guest-house-management.jpeg')" }} />
                     </div>
                 </div>
             </div>

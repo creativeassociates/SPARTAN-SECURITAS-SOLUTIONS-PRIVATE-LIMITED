@@ -1,12 +1,12 @@
 import Navbar from "../../../widgets/layout/navbar.jsx";
 import { navRoutes } from "../../../routes.jsx";
-import ScrollToTop from "../../../widgets/scroll-to-top.jsx";
+
 import { Typography } from "@material-tailwind/react";
 
 export function InstitutionalSecurity() {
     return (
         <>
-            <ScrollToTop />
+            
             <div className="relative" style={{backgroundImage: "url('./img/bg-5.jpeg')"}}>
                 <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
 

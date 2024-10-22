@@ -2,8 +2,8 @@ import { Typography } from "@material-tailwind/react";
 import React, { useRef } from "react";
 import Navbar from "../../../widgets/layout/navbar.jsx";
 import { navRoutes } from "../../../routes.jsx";
-import ScrollToTop from "../../../widgets/scroll-to-top.jsx";
 import { motion, useInView } from "framer-motion";
+import ScrollToTop from "../../../widgets/scroll-to-top.jsx";
 
 export function BodyGuards() {
     // Create a ref for the component to track visibility
@@ -18,7 +18,7 @@ export function BodyGuards() {
 
     return (
         <>
-            <ScrollToTop />
+            <ScrollToTop/>
             <div className="relative" style={{ backgroundImage: "url('./img/bg-5.jpeg')" }}>
                 <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
 

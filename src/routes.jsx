@@ -58,6 +58,30 @@ import {HotelSecurity} from "./pages/inner-pages/security-guarding/hotel-securit
 import {InstitutionalSecurity} from "./pages/inner-pages/security-guarding/institutional-security.jsx";
 import {ResidentialSecurity} from "./pages/inner-pages/security-guarding/residential-security.jsx";
 import {ExecutiveProtection} from "./pages/inner-pages/security-guarding/executive-protection.jsx";
+import {HousekeepingCleaningServices} from "./pages/inner-pages/soft-services/housekeeping-&-cleaning-services.jsx";
+import {
+    DisinfectingSanitizingServices
+} from "./pages/inner-pages/soft-services/disinfecting-and-sanitizing-services.jsx";
+import {PestControlService} from "./pages/inner-pages/soft-services/pest-control-service.jsx";
+import {PantryServices} from "./pages/inner-pages/soft-services/pantry-services.jsx";
+import {FacadeCleaning} from "./pages/inner-pages/soft-services/facade-cleaning.jsx";
+import {GuestHouseManagement} from "./pages/inner-pages/soft-services/guest-house-management.jsx";
+import {LawnGardenLandscaping} from "./pages/inner-pages/soft-services/lawn-and-garden-landscaping.jsx";
+import {EndToEndPayrollManagement} from "./pages/inner-pages/third-party-payroll/end-to-end-payroll-management.jsx";
+import {
+    ComplianceAndRegulatoryExpertise
+} from "./pages/inner-pages/third-party-payroll/compliance-and-regulatory-expertise.jsx";
+import {TimeAndResourceOptimization} from "./pages/inner-pages/third-party-payroll/time-and-resource-optimization.jsx";
+import {
+    AccurateAndTimelyPayrollProcessing
+} from "./pages/inner-pages/third-party-payroll/accurate-and-timely-payroll-processing.jsx";
+import {StreamlinedHRServices} from "./pages/inner-pages/third-party-payroll/streamlined-HR-services.jsx";
+import {
+    ExperiencedAndProfessionalTeam
+} from "./pages/inner-pages/third-party-payroll/experienced-and-professional-team.jsx";
+import {
+    FocusOnCoreBusinessFunctions
+} from "./pages/inner-pages/third-party-payroll/focus-on-core-business-functions.jsx";
 
 export const navRoutes = [
     {
@@ -174,6 +198,76 @@ export const routes = [
         name: "Executive Protection",
         path: "/executiveProtection",
         element: <ExecutiveProtection/>
+    },
+    {
+        name: "Housekeeping & Cleaning Services",
+        path: "/housekeeping&CleaningServices",
+        element: <HousekeepingCleaningServices/>
+    },
+    {
+        name: "Disinfecting and Sanitizing Services",
+        path: "/disinfectionAndSanitizingServices",
+        element: <DisinfectingSanitizingServices/>
+    },
+    {
+        name: "Pest Control Service",
+        path: "/pestControlService",
+        element: <PestControlService/>
+    },
+    {
+        name: "Pantry Services",
+        path: "/pantryServices",
+        element: <PantryServices/>
+    },
+    {
+        name: "Facade Cleaning",
+        path: "/facadeCleaning",
+        element: <FacadeCleaning/>
+    },
+    {
+        name: "Guest House Management",
+        path: "/guestHouseManagement",
+        element: <GuestHouseManagement/>
+    },
+    {
+        name: "Lawn and Garden Landscaping",
+        path: "/lawnAndGardenLandscaping",
+        element: <LawnGardenLandscaping/>
+    },
+    {
+        name: "End-to-End Payroll Management",
+        path: "/endToEndPayrollManagement",
+        element: <EndToEndPayrollManagement/>
+    },
+    {
+        name: "Compliance and Regulatory Expertise",
+        path: "/complianceAndRegulatoryExpertise",
+        element: <ComplianceAndRegulatoryExpertise/>
+    },
+    {
+        name: "Time and Resource Optimization",
+        path: "/timeAndResourceOptimization",
+        element: <TimeAndResourceOptimization/>
+    },
+    {
+        name: "Accurate and Timely Payroll Processing",
+        path: "/accurateAndTimelyPayrollProcessing",
+        element: <AccurateAndTimelyPayrollProcessing/>
+    },
+    {
+        name: "Streamlined HR Services",
+        path: "/streamlinedHRServices",
+        element: <StreamlinedHRServices/>
+    },
+    {
+        name: "Experienced and Professional Team",
+        path: "/experiencedAndProfessionalTeam",
+        element: <ExperiencedAndProfessionalTeam/>
+    },
+    {
+        name: "Focus on Core Business Functions",
+        path: "/focusOnCoreBusinessFunctions",
+        element: <FocusOnCoreBusinessFunctions/>
     },
     {
         name: "Access Control",

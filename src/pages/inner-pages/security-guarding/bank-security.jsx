@@ -2,8 +2,8 @@ import {Typography} from "@material-tailwind/react";
 import React, {useRef} from "react";
 import Navbar from "../../../widgets/layout/navbar.jsx";
 import {navRoutes} from "../../../routes.jsx";
-import ScrollToTop from "../../../widgets/scroll-to-top.jsx";
 import {motion, useInView} from "framer-motion";
+import ScrollToTop from "../../../widgets/scroll-to-top.jsx";
 
 export function BankSecurity() {
     // Create a ref for the component to track visibility

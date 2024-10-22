@@ -3,7 +3,7 @@ import { navRoutes } from "../../../routes.jsx";
 
 import { Typography } from "@material-tailwind/react";
 
-export function HotelSecurity() {
+export function PantryServices() {
     return (
         <>
             
@@ -17,22 +17,22 @@ export function HotelSecurity() {
                 <div className="relative min-h-screen flex flex-col md:flex-row w-10/12 mx-auto pt-10 pb-20">
                     <div className="container text-center px-4 md:px-8 flex-1">
                         <Typography variant="h2" color="white" className="text-left text-3xl md:text-4xl lg:text-5xl">
-                            Hotel Security
+                            Pantry Services
                         </Typography>
                         <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
-                            At Spartan Securitas Solutions, we understand the unique security challenges that hotels face. Our Hotel Security services ensure that both staff and guests are protected at all times. We provide surveillance, entry point security, and quick response teams to handle emergencies, allowing hotel management to focus on delivering a superior guest experience.
-                        </Typography>
-                        <br />
-                        <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
-                            Our security guards are trained to blend into the hospitality environment while maintaining a high level of vigilance. From monitoring entrances and exits, patrolling hallways, to ensuring that key areas like lobbies, parking lots, and event spaces are secure, we offer a complete security package for hotels of all sizes. Our team also handles VIP protection for high-profile guests, ensuring their privacy and safety are always prioritized.
+                            Spartan Securitas Solutions offers comprehensive Pantry Services tailored to enhance the workplace experience. We understand that a well-stocked and efficiently managed pantry can improve employee satisfaction and productivity. Our pantry services include the procurement, stocking, and management of snacks, beverages, and essential supplies for your office environment.
                         </Typography>
                         <br />
                         <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
-                            With a comprehensive understanding of hotel operations, we work closely with management to customize security plans that fit the specific layout and needs of your property, enhancing safety while maintaining the welcoming atmosphere that guests expect.
+                            We work closely with clients to customize pantry offerings based on dietary preferences and corporate culture. From healthy snacks to gourmet coffee, our selection is designed to cater to diverse tastes and promote well-being in the workplace. Our team ensures regular inventory checks and restocking, taking the burden off your staff so they can focus on their core responsibilities.
+                        </Typography>
+                        <br />
+                        <Typography variant="paragraph" color="white" className="text-left font-light mt-5 text-sm md:text-base lg:text-lg">
+                            Our goal is to create a welcoming and enjoyable pantry environment that fosters collaboration and social interaction among employees. With Spartan Securitas Solutions, you can count on reliable pantry services that enhance the overall workplace atmosphere.
                         </Typography>
                     </div>
                     <div className="flex-1 pt-10 md:pt-20">
-                        <div className="h-80 md:h-96 lg:h-[32rem] bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('./img/hotel-security.png')" }} />
+                        <div className="h-80 md:h-96 lg:h-[32rem] bg-cover bg-center rounded-lg" style={{ backgroundImage: "url('./img/pantry-services.jpg')" }} />
                     </div>
                 </div>
             </div>
