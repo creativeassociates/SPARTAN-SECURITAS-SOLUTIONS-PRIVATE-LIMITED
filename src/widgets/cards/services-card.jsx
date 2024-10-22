@@ -23,7 +23,7 @@ export function ServicesCard({img, name, path,services = []}) {
                 <ul className="pl-8">
                     {services.map((service, index) => (
                         <li key={index} className="list-disc">
-                            <Link to={service.path || "#"}>{service.name}</Link>
+                            <Link to={service.path || "#"} className="text-lg">{service.name}</Link>
                             {Array.isArray(service.underContent) && (
                                 <ul className="pl-4">
                                     {service.underContent.map((content, subIndex) => (

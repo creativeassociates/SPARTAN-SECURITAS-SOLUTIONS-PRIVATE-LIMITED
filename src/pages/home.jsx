@@ -270,7 +270,7 @@ export function Home() {
                                 Our Services
                             </Typography>
                             <motion.div
-                                className="mt-9 grid grid-cols-1 gap-6 sm:gap-12 md:grid-cols-2 lg:gap-2 xl:grid-cols-4"
+                                className="mt-9 grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 lg:gap-4"
                                 initial="hidden"
                                 animate={isServicesInView ? "visible" : "hidden"}
                                 variants={fadeInUp}>

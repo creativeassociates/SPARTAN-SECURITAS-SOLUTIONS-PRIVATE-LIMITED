@@ -2,37 +2,62 @@ import {Home} from "./pages/home.jsx";
 import {WhoWeAre} from "./pages/who-we-are.jsx";
 import {WhatWeDo} from "./pages/what-we-do.jsx";
 import {WorkingWithUsPleasure} from "./pages/working-with-us-pleasure.jsx";
-import {AccessControl} from "./pages/inner-pages/access-control.jsx";
+import {AccessControl} from "./pages/inner-pages/electronic-security/access-control.jsx";
 import {
     IntrusionDetectionPerimeterProtectionSystems
-} from "./pages/inner-pages/intrustion-detection-&-premirmeter-protection-system.jsx";
-import {VehicleSurveillanceSystem} from "./pages/inner-pages/vehicle-surveillance-system.jsx";
-import {ExplosiveDetectors} from "./pages/inner-pages/explosive-detectors.jsx";
-import {TimeAndAttendanceSystems} from "./pages/inner-pages/time-and-attendance-systems.jsx";
-import {FireDetectionFireFightingSystem} from "./pages/inner-pages/fire-detection-&-fire-fighting-system.jsx";
-import {HeatSmokeDetection} from "./pages/inner-pages/heat-&-smoke-detection.jsx";
+} from "./pages/inner-pages/electronic-security/intrustion-detection-&-premirmeter-protection-system.jsx";
+import {VehicleSurveillanceSystem} from "./pages/inner-pages/electronic-security/vehicle-surveillance-system.jsx";
+import {ExplosiveDetectors} from "./pages/inner-pages/electronic-security/explosive-detectors.jsx";
+import {TimeAndAttendanceSystems} from "./pages/inner-pages/electronic-security/time-and-attendance-systems.jsx";
+import {
+    FireDetectionFireFightingSystem
+} from "./pages/inner-pages/electronic-security/fire-detection-&-fire-fighting-system.jsx";
+import {HeatSmokeDetection} from "./pages/inner-pages/electronic-security/heat-&-smoke-detection.jsx";
 import {
     MaintenanceOfPrecisionAirConditionersThermostatAHU
-} from "./pages/inner-pages/maintenance-of-precision-air-conditioners-thermostat-AHU.jsx";
+} from "./pages/inner-pages/facility-management/maintenance-of-precision-air-conditioners-thermostat-AHU.jsx";
 import {
     ProgrammableNonProgrammableFireAlarmSystem
-} from "./pages/inner-pages/programmable-non-programmable-fire-alarm-system.jsx";
-import {WaterSprinklers} from "./pages/inner-pages/water-sprinklers.jsx";
-import {HydrantWetRiserSystems} from "./pages/inner-pages/hydrant-&-wet-riser-systems.jsx";
-import {VRVVAV} from "./pages/inner-pages/VRV-VAV.jsx";
-import {HSU} from "./pages/inner-pages/hsu.jsx";
-import {BuildingManagementSystem} from "./pages/inner-pages/building-management-system.jsx";
-import {AVAndPASystem} from "./pages/inner-pages/AV-and-PA-system.jsx";
-import {VisitorManagementSystem} from "./pages/inner-pages/visitor-management-system.jsx";
-import {TurnstilesFlapBarrierBoomBarrier} from "./pages/inner-pages/turnstiles-flapBarrier-boomBarrier.jsx";
-import {CafeteriaManagement} from "./pages/inner-pages/cafeteria-management.jsx";
-import {AutomatedParkingManagement} from "./pages/inner-pages/automated-parking-management.jsx";
-import {BiometricAttendanceManagementSystems} from "./pages/inner-pages/biometric-attendance-management-systems.jsx";
-import {VehicleManagementThroughGPRSSolutions} from "./pages/inner-pages/vehicle-management-through-GPRS-solutions.jsx";
-import {FireExtinguishers} from "./pages/inner-pages/fire-extinguishers.jsx";
+} from "./pages/inner-pages/electronic-security/programmable-non-programmable-fire-alarm-system.jsx";
+import {WaterSprinklers} from "./pages/inner-pages/electronic-security/water-sprinklers.jsx";
+import {HydrantWetRiserSystems} from "./pages/inner-pages/electronic-security/hydrant-&-wet-riser-systems.jsx";
+import {VRVVAV} from "./pages/inner-pages/facility-management/VRV-VAV.jsx";
+import {HSU} from "./pages/inner-pages/facility-management/hsu.jsx";
+import {BuildingManagementSystem} from "./pages/inner-pages/facility-management/building-management-system.jsx";
+import {AVAndPASystem} from "./pages/inner-pages/facility-management/AV-and-PA-system.jsx";
+import {VisitorManagementSystem} from "./pages/inner-pages/facility-management/visitor-management-system.jsx";
+import {
+    TurnstilesFlapBarrierBoomBarrier
+} from "./pages/inner-pages/facility-management/turnstiles-flapBarrier-boomBarrier.jsx";
+import {CafeteriaManagement} from "./pages/inner-pages/facility-management/cafeteria-management.jsx";
+import {AutomatedParkingManagement} from "./pages/inner-pages/technical-solutions/automated-parking-management.jsx";
+import {
+    BiometricAttendanceManagementSystems
+} from "./pages/inner-pages/technical-solutions/biometric-attendance-management-systems.jsx";
+import {
+    VehicleManagementThroughGPRSSolutions
+} from "./pages/inner-pages/technical-solutions/vehicle-management-through-GPRS-solutions.jsx";
+import {FireExtinguishers} from "./pages/inner-pages/electronic-security/fire-extinguishers.jsx";
 import {ElectronicSecuritySolutions} from "./pages/electronic-security-solutions.jsx";
 import {FacilityManagement} from "./pages/facility-management.jsx";
 import {TechnicalSolutions} from "./pages/technical-solutions.jsx";
+import {SecurityGuardServices} from "./pages/security-guards.jsx";
+import {SoftServices} from "./pages/soft-services.jsx";
+import {ThirdPartyPayroll} from "./pages/third-party-payroll.jsx";
+import {
+    SecurityGuardsAtAccessPoints
+} from "./pages/inner-pages/security-guarding/security-guards-at-access-points-to-counter-theft.jsx";
+import {BodyGuards} from "./pages/inner-pages/security-guarding/body-guard.jsx";
+import {GunMans} from "./pages/inner-pages/security-guarding/gun-mans.jsx";
+import {CorporateSecurity} from "./pages/inner-pages/security-guarding/corporate-security.jsx";
+import {IndustrialSecurity} from "./pages/inner-pages/security-guarding/industrial-security.jsx";
+import {BankSecurity} from "./pages/inner-pages/security-guarding/bank-security.jsx";
+import {EventSecurity} from "./pages/inner-pages/security-guarding/event-security.jsx";
+import {RetailSecurity} from "./pages/inner-pages/security-guarding/retail-security.jsx";
+import {HotelSecurity} from "./pages/inner-pages/security-guarding/hotel-security.jsx";
+import {InstitutionalSecurity} from "./pages/inner-pages/security-guarding/institutional-security.jsx";
+import {ResidentialSecurity} from "./pages/inner-pages/security-guarding/residential-security.jsx";
+import {ExecutiveProtection} from "./pages/inner-pages/security-guarding/executive-protection.jsx";
 
 export const navRoutes = [
     {
@@ -71,11 +96,85 @@ export const routes = [
         element: <TechnicalSolutions/>
     },
     {
+        name: "Security Guarding",
+        path: "/securityGuards",
+        element: <SecurityGuardServices/>
+    },
+    {
+        name: "Soft Services",
+        path: "/softServices",
+        element: <SoftServices/>
+    },
+    {
+        name: "Third Party Payroll",
+        path: "/thirdPartyPayroll",
+        element: <ThirdPartyPayroll/>
+    },
+    {
         name: "Working with us is a pleasure",
         path: "/workingWithUsIsPleasure",
         element: <WorkingWithUsPleasure/>,
     },
-
+    {
+        name: "Security Guards At Access Points",
+        path: "/securityGuardsAtAccessPoints",
+        element: <SecurityGuardsAtAccessPoints/>
+    },
+    {
+        name: "Body Guards",
+        path: "/bodyGuards",
+        element: <BodyGuards/>
+    },
+    {
+        name: "Gun Mans",
+        path: "/gunMans",
+        element: <GunMans/>
+    },
+    {
+        name: "Corporate Security",
+        path: "/corporateSecurity",
+        element: <CorporateSecurity/>
+    },
+    {
+        name: "Industrial Security",
+        path: "/industrialSecurity",
+        element: <IndustrialSecurity/>
+    },
+    {
+        name: "Bank Security",
+        path: "/bankSecurity",
+        element: <BankSecurity/>
+    },
+    {
+        name: "Event Security",
+        path: "/eventSecurity",
+        element: <EventSecurity/>
+    },
+    {
+        name: "Retail Security",
+        path: "/retailSecurity",
+        element: <RetailSecurity/>
+    },
+    {
+        name: "Hotel Security",
+        path: "/hotelSecurity",
+        element: <HotelSecurity/>
+    },
+    {
+        name: "Institutional Security",
+        path: "/institutionalSecurity",
+        element: <InstitutionalSecurity/>
+    },
+    {
+        name: "Residential Security",
+        path: "/residentialSecurity",
+        element: <ResidentialSecurity/>
+    },
+    {
+        name: "Executive Protection",
+        path: "/executiveProtection",
+        element: <ExecutiveProtection/>
+    },
     {
         name: "Access Control",
         path: "/accessControl",

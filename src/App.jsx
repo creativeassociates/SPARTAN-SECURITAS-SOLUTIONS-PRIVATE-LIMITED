@@ -1,6 +1,5 @@
 import {Routes, Route, Navigate} from "react-router-dom";
 import {navRoutes, routes} from "./routes.jsx";
-import styles from "./App.module.css";
 import {Meta} from "./meta.jsx";
 
 
