@@ -1,3 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #050915;
+  }
+
+  body {
+    @apply bg-night text-slate-100 font-body antialiased;
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.18), transparent 25%),
+      radial-gradient(circle at 80% 0%, rgba(34, 211, 238, 0.18), transparent 23%),
+      radial-gradient(circle at 50% 70%, rgba(59, 130, 246, 0.14), transparent 25%),
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: cover, cover, cover, 22px 22px, 22px 22px;
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
+    background-blend-mode: screen;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: rgba(34, 211, 238, 0.25);
+    color: #e5e7eb;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.15);
+    border-color: #22d3ee;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 border border-white/10 rounded-3xl backdrop-blur-2xl shadow-card transition-all duration-500;
+  }
+
+  .glass-panel:hover {
+    @apply border-white/20 shadow-glow -translate-y-0.5;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-slate-200;
+  }
+
+  .section-shell {
+    @apply relative overflow-hidden px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20 min-h-screen bg-gradient-to-b from-night via-night-soft to-night;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(124, 58, 237, 0.15), transparent 35%),
+      radial-gradient(circle at 80% 0%, rgba(34, 211, 238, 0.18), transparent 30%);
+  }
+
+  .section-grid {
+    @apply container mx-auto grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start;
+  }
+
+  .orb {
+    position: absolute;
+    filter: blur(70px);
+    opacity: 0.6;
+    z-index: 0;
+  }
+
+  .orb.a {
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(124, 58, 237, 0.45), transparent 60%);
+    top: -160px;
+    left: -80px;
+  }
+
+  .orb.b {
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(34, 211, 238, 0.55), transparent 60%);
+    bottom: -140px;
+    right: -40px;
+  }
+
+  .orb.c {
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.45), transparent 60%);
+    top: 28%;
+    right: 18%;
+  }
+
+  .beam {
+    @apply absolute inset-0 pointer-events-none;
+    background: radial-gradient(circle at 20% 20%, rgba(124, 58, 237, 0.08) 0, transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(34, 211, 238, 0.08) 0, transparent 35%);
+  }
+
+  .surface-card {
+    @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-card;
+  }
+}

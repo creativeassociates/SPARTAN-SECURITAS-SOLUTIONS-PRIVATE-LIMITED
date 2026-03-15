@@ -1,35 +1,46 @@
 import PropTypes from "prop-types";
-import {Card, Avatar, Typography} from "@material-tailwind/react";
+import {Card, Typography} from "@material-tailwind/react";
 import {Link} from "react-router-dom";
-import {useNavigate} from "react-router";
 
-export function ServicesCard({img, name, path,services = []}) {
-    const navigate = useNavigate();
-
+export function ServicesCard({img, name, path, services = []}) {
     return (
-        <Card color="brown" shadow={true} className="pt-3">
-            <Avatar
-                src={img}
-                alt={name}
-                size="xxl"
-                variant="rounded"
-                className="h-60 w-8/12 border-b-4 border-r-4 border-l-4 rounded-b-xl border-b-blue-gray-200 mx-auto shadow-lg shadow-gray-500/25"
-            />
-            <Typography variant="h5" color="white" className="mt-6 mb-1 text-center">
-                <Link to={path || "#"}>{name}</Link>
-            </Typography>
+        <Card className="group relative h-full overflow-hidden rounded-2xl border border-white/12 bg-gradient-to-br from-night-soft/95 via-night/90 to-night-soft/95 shadow-card">
+            <div className="relative h-52 w-full overflow-hidden">
+                <img
+                    src={img}
+                    alt={name}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-night-soft via-night-soft/70 to-transparent"/>
+            </div>
 
-            <div className="container p-2">
-                <ul className="pl-8">
+            <div className="space-y-4 px-6 pb-6 pt-5">
+                <Typography variant="h5" className="text-white tracking-tight">
+                    <Link to={path || "#"} className="inline-flex items-center gap-2">
+                        <span className="bg-gradient-to-r from-cyanpulse via-white to-aurora bg-clip-text text-transparent">
+                            {name}
+                        </span>
+                        <span
+                            className="h-[1px] w-8 bg-gradient-to-r from-cyanpulse/60 to-transparent transition-all duration-300 group-hover:w-12"/>
+                    </Link>
+                </Typography>
+
+                <ul className="space-y-2 text-sm leading-relaxed text-slate-200">
                     {services.map((service, index) => (
-                        <li key={index} className="list-disc">
-                            <Link to={service.path || "#"} className="text-lg">{service.name}</Link>
+                        <li key={index} className="border-l border-white/12 pl-3">
+                            <Link to={service.path || "#"} className="transition duration-200 hover:text-white">
+                                {service.name}
+                            </Link>
                             {Array.isArray(service.underContent) && (
-                                <ul className="pl-4">
+                                <ul className="mt-2 space-y-1 border-l border-white/12 pl-3 text-slate-300">
                                     {service.underContent.map((content, subIndex) => (
-                                        <li key={`${index}-${subIndex}`} className="list-disc">
+                                        <li key={`${index}-${subIndex}`}>
                                             {content.path ? (
-                                                <Link to={content.path}>{content.name}</Link>
+                                                <Link to={content.path} className="transition duration-200 hover:text-white">
+                                                    {content.name}
+                                                </Link>
                                             ) : (
                                                 <span>{content.name}</span>
                                             )}
@@ -52,17 +63,17 @@ ServicesCard.propTypes = {
     services: PropTypes.arrayOf(
         PropTypes.shape({
             name: PropTypes.string.isRequired,
-            path: PropTypes.string, // Make path optional
-            underContent: PropTypes.arrayOf(PropTypes.arrayOf(
+            path: PropTypes.string,
+            underContent: PropTypes.arrayOf(
                 PropTypes.shape({
                     name: PropTypes.string.isRequired,
                     path: PropTypes.string,
                 })
-            )),
+            ),
         })
     ).isRequired,
 };
 
-ServicesCard.displayName = "/src/widgets/layout/services-card.jsx";
+ServicesCard.displayName = "/src/widgets/cards/services-card.jsx";
 
 export default ServicesCard;

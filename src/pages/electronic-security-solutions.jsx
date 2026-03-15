@@ -1,88 +1,118 @@
-import { Typography } from "@material-tailwind/react";
-import React, { useRef } from "react";
+import {Typography} from "@material-tailwind/react";
+import React, {useRef} from "react";
 import Navbar from "../widgets/layout/navbar.jsx";
-import routes, { navRoutes } from "../routes.jsx";
-import { motion, useInView } from "framer-motion";
+import {navRoutes} from "../routes.jsx";
+import {motion, useInView} from "framer-motion";
 
 export function ElectronicSecuritySolutions() {
-    // Create a ref for the component to track visibility
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: false });
+    const isInView = useInView(ref, {once: true});
 
-    // Animation variants
     const fadeIn = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        hidden: {opacity: 0, y: 24},
+        visible: {opacity: 1, y: 0, transition: {duration: 0.7, ease: "easeOut"}},
     };
 
     return (
-        <>
-            
-            <div className="relative" style={{ backgroundImage: "url('./img/bg-5.jpeg')" }}>
-                <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
-
-                <div className="relative container mx-auto p-4">
-                    <Navbar routes={navRoutes} />
+        <div className="section-shell">
+            <div className="orb a"/>
+            <div className="orb b"/>
+            <div className="orb c"/>
+            <div className="beam"/>
+            <div className="container relative mx-auto">
+                <div className="mb-8 lg:mb-12">
+                    <Navbar routes={navRoutes}/>
                 </div>
-
                 <motion.div
                     ref={ref}
-                    className="relative min-h-screen flex flex-col md:flex-row w-10/12 mx-auto pt-10 pb-20"
+                    className="section-grid"
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     variants={fadeIn}
                 >
-                    <div className="container text-center px-4 md:px-8 flex-1">
-                        <Typography variant="h2" color="white" className="text-left text-3xl md:text-4xl lg:text-5xl">
+                    <div className="glass-panel p-6 sm:p-8 lg:p-10">
+                        <span className="chip">Electronic Security</span>
+                        <Typography variant="h2"
+                                    className="mt-2 text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
                             Electronic Security Solutions
                         </Typography>
-                        <Typography
-                            variant="paragraph"
-                            color="white"
-                            className="text-left w-full font-light mt-5 text-sm md:text-base lg:text-lg"
-                        >
-                            Spartan Securitas Solutions Private Limited specializes in comprehensive electronic security solutions designed to protect your assets and ensure the safety of your facility. Our services include a wide range of advanced security systems, such as:
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                CCTV Surveillance:
-                            </Typography>
-                            High-definition cameras and monitoring systems for effective visual coverage of your premises.
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                Access Control Systems:
-                            </Typography>
-                            Secure entry solutions that restrict access to authorized personnel only.
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                Intrusion Detection Systems:
-                            </Typography>
-                            Advanced sensors and alarms that alert you to unauthorized access or breaches.
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                Fire Detection and Fighting Systems:
-                            </Typography>
-                            Reliable systems that detect and suppress fires to minimize damage and ensure safety.
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                Biometric Security Solutions:
-                            </Typography>
-                            Cutting-edge technology for secure and convenient access control.
-                            <br/><br/>
-                            With our expertise in electronic security, we provide tailored solutions that enhance safety, reduce risks, and give you peace of mind. Our dedicated team ensures seamless implementation, ongoing support, and regular maintenance, keeping your security systems up-to-date and effective. Choose Spartan Securitas Solutions for reliable protection and advanced security solutions.
-                        </Typography>
+                        <div className="mt-4 space-y-5 text-base leading-relaxed text-slate-200">
+                            <p>
+                                Spartan Securitas Solutions Private Limited specializes in comprehensive electronic
+                                security solutions designed to protect your assets and ensure the safety of your
+                                facility. Our services include a wide range of advanced security systems, such as:
+                            </p>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    CCTV Surveillance:
+                                </Typography>
+                                <p className="text-slate-200">
+                                    High-definition cameras and monitoring systems for effective visual coverage of your
+                                    premises.
+                                </p>
+                            </div>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    Access Control Systems:
+                                </Typography>
+                                <p className="text-slate-200">
+                                    Secure entry solutions that restrict access to authorized personnel only.
+                                </p>
+                            </div>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    Intrusion Detection Systems:
+                                </Typography>
+                                <p className="text-slate-200">
+                                    Advanced sensors and alarms that alert you to unauthorized access or breaches.
+                                </p>
+                            </div>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    Fire Detection and Fighting Systems:
+                                </Typography>
+                                <p className="text-slate-200">
+                                    Reliable systems that detect and suppress fires to minimize damage and ensure
+                                    safety.
+                                </p>
+                            </div>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    Biometric Security Solutions:
+                                </Typography>
+                                <p className="text-slate-200">
+                                    Cutting-edge technology for secure and convenient access control.
+                                </p>
+                            </div>
+                            <p>
+                                With our expertise in electronic security, we provide tailored solutions that enhance
+                                safety, reduce risks, and give you peace of mind. Our dedicated team ensures seamless
+                                implementation, ongoing support, and regular maintenance, keeping your security systems
+                                up-to-date and effective. Choose Spartan Securitas Solutions for reliable protection and
+                                advanced security solutions.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="flex-1 pt-10 md:pt-20">
-                        <motion.div
-                            className="h-80 md:h-96 lg:h-[32rem] bg-cover bg-center rounded-lg"
-                            style={{ backgroundImage: "url('./img/Electronic-Security-Solutions.jpeg')" }}
-                            initial="hidden"
-                            animate={isInView ? "visible" : "hidden"}
-                            variants={fadeIn}
-                        />
-                    </div>
+                    <motion.div
+                        className="relative"
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                        variants={fadeIn}
+                    >
+                        <div className="glass-panel relative h-full overflow-hidden p-2">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/0"/>
+                            <div
+                                className="relative h-80 w-full overflow-hidden rounded-2xl sm:h-96 lg:h-[32rem]">
+                                <div
+                                    className="absolute inset-0 bg-gradient-to-tr from-cyanpulse/15 via-transparent to-aurora/10"/>
+                                <div className="h-full w-full rounded-2xl bg-cover bg-center"
+                                     style={{backgroundImage: "url('./img/Electronic-Security-Solutions.jpeg')"}}/>
+                            </div>
+                        </div>
+                    </motion.div>
                 </motion.div>
             </div>
-        </>
+        </div>
     );
 }

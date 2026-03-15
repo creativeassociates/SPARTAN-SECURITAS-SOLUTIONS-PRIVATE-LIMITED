@@ -93,24 +93,34 @@ export const ClientSlider = () => {
     };
 
     return (
-        <div className="client-slider pt-10">
-            <Typography
-                variant="h2"
-                color="black"
-                className="mb-4 font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center"
-            >
-                Featured clients
-            </Typography>
-            <Slider {...settings}>
-                {clients.map((client) => (
-                    <div key={client.id} className="client-slide">
-                        <div className="client-image-container">
-                            <img src={client.logo} alt={client.name} className="client-image w-2/3 aspect-square object-contain"/>
+        <div className="relative px-4 py-16">
+            <div className="mx-auto max-w-6xl text-center space-y-3">
+                <span className="chip">Featured clients</span>
+                <Typography
+                    variant="h2"
+                    className="bg-gradient-to-r from-cyanpulse via-white to-aurora bg-clip-text text-4xl font-semibold text-transparent sm:text-5xl"
+                >
+                    Featured clients
+                </Typography>
+                <Typography className="text-slate-300">
+                    Trusted partners across retail, aviation, finance, and technology.
+                </Typography>
+            </div>
+            <div className="client-slider mt-10">
+                <Slider {...settings}>
+                    {clients.map((client) => (
+                        <div key={client.id} className="client-slide">
+                            <div className="client-image-container">
+                                <img src={client.logo} alt={client.name} loading="lazy" decoding="async"
+                                     className="client-image w-2/3 aspect-square object-contain"/>
+                            </div>
+                            <Typography variant="small" className="mt-3 text-slate-200 opacity-80">
+                                {client.name}
+                            </Typography>
                         </div>
-                    </div>
-                ))}
-            </Slider>
+                    ))}
+                </Slider>
+            </div>
         </div>
     );
 };
-

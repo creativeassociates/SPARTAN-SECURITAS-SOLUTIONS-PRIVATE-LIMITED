@@ -1,45 +1,44 @@
-import { Button, Typography } from "@material-tailwind/react";
-import React, { useRef } from "react";
+import {Typography} from "@material-tailwind/react";
+import React, {useRef} from "react";
 import Navbar from "../widgets/layout/navbar.jsx";
-import routes, { navRoutes } from "../routes.jsx";
-import { motion, useInView } from "framer-motion";
+import {navRoutes} from "../routes.jsx";
+import {motion, useInView} from "framer-motion";
 
 export function WorkingWithUsPleasure() {
-    // Create a ref for the component to track visibility
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: false });
+    const isInView = useInView(ref, {once: true});
 
-    // Animation variants
     const fadeIn = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        hidden: {opacity: 0, y: 24},
+        visible: {opacity: 1, y: 0, transition: {duration: 0.7, ease: "easeOut"}},
     };
 
     return (
-        <>
-            
-            <div className="relative" style={{ backgroundImage: "url('./img/bg-5.jpeg')" }}>
-                <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
-
-                <div className="relative container mx-auto p-4">
-                    <Navbar routes={navRoutes} />
+        <div className="section-shell">
+            <div className="orb a"/>
+            <div className="orb b"/>
+            <div className="orb c"/>
+            <div className="beam"/>
+            <div className="container relative mx-auto">
+                <div className="mb-8 lg:mb-12">
+                    <Navbar routes={navRoutes}/>
                 </div>
-
                 <motion.div
                     ref={ref}
-                    className="relative min-h-screen flex flex-col md:flex-row w-10/12 mx-auto pt-10 pb-20"
+                    className="section-grid"
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     variants={fadeIn}
                 >
-                    <div className="container text-center px-4 md:px-8 flex-1">
-                        <Typography variant="h2" color="white" className="text-left text-3xl md:text-4xl lg:text-5xl">
+                    <div className="glass-panel p-6 sm:p-8 lg:p-10 space-y-6">
+                        <span className="chip">Working with us is a pleasure</span>
+                        <Typography variant="h2"
+                                    className="text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
                             Working with Us is a Pleasure
                         </Typography>
                         <Typography
                             variant="paragraph"
-                            color="white"
-                            className="text-left w-full font-light mt-5 text-sm md:text-base lg:text-lg"
+                            className="text-base leading-relaxed text-slate-200"
                         >
                             Partnering with us means seamless collaboration, innovative solutions, and a commitment to
                             your business’s success. Our expert team brings personalized, cutting-edge services,
@@ -48,67 +47,74 @@ export function WorkingWithUsPleasure() {
                             trust and excellence.
                         </Typography>
 
-                        <Typography variant="h3" color="white" className="text-left w-full mt-5 text-2xl md:text-3xl">
+                        <Typography variant="h3" className="text-2xl font-semibold text-white">
                             Why Partner with Us?
                         </Typography>
 
-                        <Typography variant="paragraph" color="white" className="text-left w-full font-light mt-5 text-sm md:text-base lg:text-lg">
-                            <Typography variant="h4" color="white" className="text-left mt-5 text-xl md:text-2xl">
-                                Client-Centric Approach:
-                            </Typography>
-                            We listen to your requirements and tailor our solutions to meet your specific challenges.
-                            Our commitment to understanding your business ensures that we deliver results that truly
-                            matter.
-                            <br />
+                        <div className="space-y-5 text-base leading-relaxed text-slate-200">
+                            <div>
+                                <Typography variant="h4" className="text-xl font-semibold text-white">
+                                    Client-Centric Approach:
+                                </Typography>
+                                <span>We listen to your requirements and tailor our solutions to meet your specific challenges. Our commitment to understanding your business ensures that we deliver results that truly matter.</span>
+                            </div>
 
-                            <Typography variant="h4" color="white" className="text-left mt-5 text-xl md:text-2xl">
-                                Expertise and Experience:
-                            </Typography>
-                            With over 69 years in the industry, our team comprises highly skilled professionals who are
-                            passionate about what they do. We leverage our extensive knowledge and experience to provide
-                            innovative solutions that drive operational efficiency and security.
-                            <br />
+                            <div>
+                                <Typography variant="h4" className="text-xl font-semibold text-white">
+                                    Expertise and Experience:
+                                </Typography>
+                                <span>With over 69 years in the industry, our team comprises highly skilled professionals who are passionate about what they do. We leverage our extensive knowledge and experience to provide innovative solutions that drive operational efficiency and security.</span>
+                            </div>
 
-                            <Typography variant="h4" color="white" className="text-left mt-5 text-xl md:text-2xl">
-                                Open Communication:
-                            </Typography>
-                            Transparency and open lines of communication are the cornerstones of our working
-                            relationship. We keep you informed every step of the way, ensuring that you are always in
-                            the loop regarding project progress and updates.
-                            <br />
+                            <div>
+                                <Typography variant="h4" className="text-xl font-semibold text-white">
+                                    Open Communication:
+                                </Typography>
+                                <span>Transparency and open lines of communication are the cornerstones of our working relationship. We keep you informed every step of the way, ensuring that you are always in the loop regarding project progress and updates.</span>
+                            </div>
 
-                            <Typography variant="h4" color="white" className="text-left mt-5 text-xl md:text-2xl">
-                                Proactive Support:
-                            </Typography>
-                            Our partnership doesn't end with the delivery of services. We provide continuous support and
-                            maintenance to ensure that your operations run smoothly. Our dedicated crisis management
-                            team is always available to address any challenges that may arise.
-                            <br />
+                            <div>
+                                <Typography variant="h4" className="text-xl font-semibold text-white">
+                                    Proactive Support:
+                                </Typography>
+                                <span>Our partnership doesn't end with the delivery of services. We provide continuous support and maintenance to ensure that your operations run smoothly. Our dedicated crisis management team is always available to address any challenges that may arise.</span>
+                            </div>
 
-                            <Typography variant="h4" color="white" className="text-left mt-5 text-xl md:text-2xl">
-                                Shared Success:
-                            </Typography>
-                            We view your success as our success. By fostering a collaborative environment, we aim to
-                            build long-term relationships that contribute to your growth and enhance your operational
-                            capabilities.
-                            <br /><br />
-                            Join us at Spartan Securitas Solutions Pvt. Ltd. and experience a partnership that is
-                            defined by excellence, dedication, and a shared commitment to success. Working with us is
-                            not just a transaction; it’s a journey towards achieving your organizational goals together.
-                        </Typography>
+                            <div>
+                                <Typography variant="h4" className="text-xl font-semibold text-white">
+                                    Shared Success:
+                                </Typography>
+                                <span>We view your success as our success. By fostering a collaborative environment, we aim to build long-term relationships that contribute to your growth and enhance your operational capabilities.</span>
+                            </div>
+
+                            <div>
+                                Join us at Spartan Securitas Solutions Pvt. Ltd. and experience a partnership that is
+                                defined by excellence, dedication, and a shared commitment to success. Working with us is
+                                not just a transaction; it’s a journey towards achieving your organizational goals
+                                together.
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="flex-1 pt-10 md:pt-20">
-                        <motion.div
-                            className="h-80 md:h-96 lg:h-[32rem] bg-cover bg-center rounded-lg"
-                            style={{ backgroundImage: "url('./img/working.jpeg')" }}
-                            initial="hidden"
-                            animate={isInView ? "visible" : "hidden"}
-                            variants={fadeIn}
-                        />
-                    </div>
+                    <motion.div
+                        className="relative"
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                        variants={fadeIn}
+                    >
+                        <div className="glass-panel relative h-full overflow-hidden p-2">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/0"/>
+                            <div
+                                className="relative h-80 w-full overflow-hidden rounded-2xl sm:h-96 lg:h-[32rem]">
+                                <div
+                                    className="absolute inset-0 bg-gradient-to-tr from-cyanpulse/15 via-transparent to-aurora/10"/>
+                                <div className="h-full w-full rounded-2xl bg-cover bg-center"
+                                     style={{backgroundImage: "url('./img/working.jpeg')"}}/>
+                            </div>
+                        </div>
+                    </motion.div>
                 </motion.div>
             </div>
-        </>
+        </div>
     );
 }

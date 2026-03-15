@@ -23,7 +23,7 @@ export function Navbar({
     }, []);
 
     const navList = (
-        <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+        <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-4">
             {routes.map(({name, path, icon, href, target}) => (
                 <Typography
                     key={name}
@@ -36,7 +36,7 @@ export function Navbar({
                         <a
                             href={href}
                             target={target}
-                            className="flex items-center gap-1 p-1 font-bold hover:text-red-600 transition duration-300"
+                            className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold tracking-wide text-slate-200 transition duration-300 hover:text-white hover:bg-white/5"
                         >
                             {icon && React.createElement(icon, {className: "w-[18px] h-[18px] opacity-75 mr-1"})}
                             {name}
@@ -45,10 +45,13 @@ export function Navbar({
                         <Link
                             to={path}
                             target={target}
-                            className="flex items-center gap-1 p-1 font-extrabold text-xl hover:text-red-600 transition duration-300"
+                            className="group flex items-center gap-2 rounded-xl px-3 py-2 text-sm font-semibold tracking-wide text-slate-200 transition duration-300 hover:text-white hover:bg-white/5"
                         >
-                            {icon && React.createElement(icon, {className: "w-[18px] h-[18px] opacity-75 mr-1"})}
-                            {name}
+                            {icon && React.createElement(icon, {className: "w-[18px] h-[18px] opacity-75"})}
+                            <span className="relative">
+                                <span className="absolute inset-x-0 -bottom-1 h-px scale-x-0 rounded-full bg-gradient-to-r from-cyanpulse via-aurora to-cyanpulse transition duration-300 group-hover:scale-x-100"/>
+                                {name}
+                            </span>
                         </Link>
                     )}
                 </Typography>
@@ -57,13 +60,20 @@ export function Navbar({
     );
 
     return (
-        <nav className="p-3">
-            <div className="flex justify-between items-center text-white">
-                <Link to="/" className="flex items-center gap-2">
-                    <img src="/img/SPARTAN-SECURITAS-SOLUTIONS-PRIVATE-LIMITED.png" alt="logo" className="h-32 w-auto"/>
-                    <Typography className="cursor-pointer font-extrabold text-2xl tracking-widest">
-                        {brandName}
-                    </Typography>
+        <nav className="sticky top-0 z-40">
+            <div className="glass-panel flex items-center justify-between px-4 py-3 lg:px-6 backdrop-blur-2xl">
+                <Link to="/" className="flex items-center gap-3">
+                    <div className="relative h-14 w-14 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-2">
+                        <div className="absolute inset-0 bg-gradient-to-br from-cyanpulse/30 via-aurora/25 to-white/10 blur-2xl"/>
+                        <img src="/img/SPARTAN-SECURITAS-SOLUTIONS-PRIVATE-LIMITED.png" alt="logo"
+                             loading="lazy" decoding="async"
+                             className="relative z-10 h-full w-full object-contain"/>
+                    </div>
+                    <div className="flex flex-col">
+                        <Typography className="cursor-pointer font-extrabold text-lg uppercase tracking-[0.18em] text-white">
+                            {brandName}
+                        </Typography>
+                    </div>
                 </Link>
                 <div className="hidden lg:block">{navList}</div>
                 <IconButton
@@ -80,9 +90,8 @@ export function Navbar({
                     )}
                 </IconButton>
             </div>
-            {/* Mobile Nav */}
             <Collapse
-                className="bg-white px-4 pt-2 pb-4 text-blue-gray-900 lg:hidden"
+                className="mt-3 rounded-2xl border border-white/10 bg-night-soft/90 px-4 pt-2 pb-4 text-slate-100 backdrop-blur-xl lg:hidden"
                 open={openNav}
             >
                 <div className="container mx-auto">

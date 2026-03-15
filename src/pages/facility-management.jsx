@@ -1,88 +1,122 @@
-import { Typography } from "@material-tailwind/react";
-import React, { useRef } from "react";
+import {Typography} from "@material-tailwind/react";
+import React, {useRef} from "react";
 import Navbar from "../widgets/layout/navbar.jsx";
-import routes, { navRoutes } from "../routes.jsx";
-import { motion, useInView } from "framer-motion";
+import {navRoutes} from "../routes.jsx";
+import {motion, useInView} from "framer-motion";
 
 export function FacilityManagement() {
-    // Create a ref for the component to track visibility
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: false });
+    const isInView = useInView(ref, {once: true});
 
-    // Animation variants
     const fadeIn = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+        hidden: {opacity: 0, y: 24},
+        visible: {opacity: 1, y: 0, transition: {duration: 0.7, ease: "easeOut"}},
     };
 
     return (
-        <>
-            
-            <div className="relative" style={{ backgroundImage: "url('./img/bg-5.jpeg')" }}>
-                <div className="absolute inset-0 h-full w-full bg-gray-900/60" />
-
-                <div className="relative container mx-auto p-4">
-                    <Navbar routes={navRoutes} />
+        <div className="section-shell">
+            <div className="orb a"/>
+            <div className="orb b"/>
+            <div className="orb c"/>
+            <div className="beam"/>
+            <div className="container relative mx-auto">
+                <div className="mb-8 lg:mb-12">
+                    <Navbar routes={navRoutes}/>
                 </div>
-
                 <motion.div
                     ref={ref}
-                    className="relative min-h-screen flex flex-col md:flex-row w-10/12 mx-auto pt-10 pb-20"
+                    className="section-grid"
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
                     variants={fadeIn}
                 >
-                    <div className="container text-center px-4 md:px-8 flex-1">
-                        <Typography variant="h2" color="white" className="text-left text-3xl md:text-4xl lg:text-5xl">
+                    <div className="glass-panel p-6 sm:p-8 lg:p-10">
+                        <span className="chip">Facility Management</span>
+                        <Typography variant="h2"
+                                    className="mt-2 text-3xl font-semibold text-white md:text-4xl lg:text-5xl">
                             Facility Management
                         </Typography>
-                        <Typography
-                            variant="paragraph"
-                            color="white"
-                            className="text-left w-full font-light mt-5 text-sm md:text-base lg:text-lg"
-                        >
-                            At Spartan Securitas Solutions Private Limited, we offer comprehensive facility management solutions that ensure your operations run smoothly and efficiently. Our services encompass a wide array of specialized areas, including:
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                Maintenance of Precision Air Conditioners:
-                            </Typography>
-                            Expert servicing of precision HVAC systems to maintain optimal indoor climate control and energy efficiency.
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                Building Management Systems (BMS):
-                            </Typography>
-                            Advanced systems for monitoring and controlling building services to enhance operational efficiency and reduce energy consumption.
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                Visitor Management Systems:
-                            </Typography>
-                            Streamlined processes for managing visitors, enhancing security, and improving the overall experience for guests.
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                Cafeteria Management:
-                            </Typography>
-                            Professional management services for cafeteria operations, ensuring quality food service and customer satisfaction.
-                            <br/><br/>
-                            <Typography variant="h5" color="white" className="font-bold">
-                                Turnstiles/Flap Barriers/Boom Barriers:
-                            </Typography>
-                            Advanced entry solutions for secure access control in various facility types, enhancing safety and efficiency.
-                            <br/><br/>
-                            Our facility management team is dedicated to providing tailored services that align with your organization’s strategic goals. We focus on optimizing resource utilization, ensuring compliance with safety standards, and creating a clean, safe, and efficient environment for employees and visitors alike. Trust Spartan Securitas Solutions for all your facility management needs and experience enhanced operational efficiency and reliability.
-                        </Typography>
+                        <div className="mt-4 space-y-5 text-base leading-relaxed text-slate-200">
+                            <p>
+                                At Spartan Securitas Solutions Private Limited, we offer comprehensive facility
+                                management solutions that ensure your operations run smoothly and efficiently. Our
+                                services encompass a wide array of specialized areas, including:
+                            </p>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    Maintenance of Precision Air Conditioners:
+                                </Typography>
+                                <p className="text-slate-200">
+                                    Expert servicing of precision HVAC systems to maintain optimal indoor climate control
+                                    and energy efficiency.
+                                </p>
+                            </div>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    Building Management Systems (BMS):
+                                </Typography>
+                                <p className="text-slate-200">
+                                    Advanced systems for monitoring and controlling building services to enhance
+                                    operational efficiency and reduce energy consumption.
+                                </p>
+                            </div>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    Visitor Management Systems:
+                                </Typography>
+                                <p className="text-slate-200">
+                                    Streamlined processes for managing visitors, enhancing security, and improving the
+                                    overall experience for guests.
+                                </p>
+                            </div>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    Cafeteria Management:
+                                </Typography>
+                                <p className="text-slate-200">
+                                    Professional management services for cafeteria operations, ensuring quality food
+                                    service and customer satisfaction.
+                                </p>
+                            </div>
+                            <div>
+                                <Typography variant="h5" className="font-bold text-white">
+                                    Turnstiles/Flap Barriers/Boom Barriers:
+                                </Typography>
+                                <p className="text-slate-200">
+                                    Advanced entry solutions for secure access control in various facility types,
+                                    enhancing safety and efficiency.
+                                </p>
+                            </div>
+                            <p>
+                                Our facility management team is dedicated to providing tailored services that align with
+                                your organization’s strategic goals. We focus on optimizing resource utilization,
+                                ensuring compliance with safety standards, and creating a clean, safe, and efficient
+                                environment for employees and visitors alike. Trust Spartan Securitas Solutions for all
+                                your facility management needs and experience enhanced operational efficiency and
+                                reliability.
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="flex-1 pt-10 md:pt-20">
-                        <motion.div
-                            className="h-80 md:h-96 lg:h-[32rem] bg-cover bg-center rounded-lg"
-                            style={{ backgroundImage: "url('./img/Facility-Management.jpeg')" }}
-                            initial="hidden"
-                            animate={isInView ? "visible" : "hidden"}
-                            variants={fadeIn}
-                        />
-                    </div>
+                    <motion.div
+                        className="relative"
+                        initial="hidden"
+                        animate={isInView ? "visible" : "hidden"}
+                        variants={fadeIn}
+                    >
+                        <div className="glass-panel relative h-full overflow-hidden p-2">
+                            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/0"/>
+                            <div
+                                className="relative h-80 w-full overflow-hidden rounded-2xl sm:h-96 lg:h-[32rem]">
+                                <div
+                                    className="absolute inset-0 bg-gradient-to-tr from-cyanpulse/15 via-transparent to-aurora/10"/>
+                                <div className="h-full w-full rounded-2xl bg-cover bg-center"
+                                     style={{backgroundImage: "url('./img/Facility-Management.jpeg')"}}/>
+                            </div>
+                        </div>
+                    </motion.div>
                 </motion.div>
             </div>
-        </>
+        </div>
     );
 }
